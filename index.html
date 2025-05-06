@@ -24,25 +24,33 @@
  <section id="header">
             <a href="#"><img src="logo.png"></a>
             <div>
-      <ul id="navbar">
+           <ul id="navbar">
  <li><a href="index.html" class="active">Home</a></li>
  <li><a href="shop.html">Shop</a></li>
  <li><a href="blog.html">Blog</a></li>
  <li><a href="about.html">About</a></li>
- <li><a href="contact.html">Contact</a></li>
- <li><a href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
-   <span class="quantity">0</span>
- </li>
+ <li><a href="contact.html">Contact</a></li><li>
+  <a href="#" id="lg-bag">
+    <i class="fal fa-shopping-bag" id="cart-icon"></i>
+  </a>
+  <span class="quantity">0</span>
+</li>
+  
  <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
                 </ul>
             </div>
-<div id="mobile">
-  <a href="cart.html" ><i class="fal fa-shopping-bag"></i>
-    <span class="quantity">0</span>
-  </a>
-  <i id="bar" class="fas fa-outdent"></i>
-</div>
+            <div id="mobile">
+              
+              <a href="#" id="mobile-cart">
+                <i class="fal fa-shopping-bag"></i>
+                <span class="quantity">0</span>
+              </a>
+            
+              <!-- Mobile menu toggle -->
+              <i id="bar" class="fas fa-outdent"></i>
+            </div>
         </section>
+  
   
     
 <section id="hero">
@@ -380,7 +388,41 @@
  </footer>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+   <!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+  <span id="closeCart" class="close-cart">×</span>
+
+  <!-- Header -->
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+  </div>
+
+  <!-- Items -->
+  <div class="cart-items">
+    <!-- Example item; duplicate for more -->
+    <div class="cart-item">
+      <img src="images/product1.jpg" alt="Product 1">
+      <div class="item-details">
+        <p>Product Name</p>
+        <div class="item-controls">
+          <button>-</button>
+          <input type="text" value="1"/>
+          <button>+</button>
+        </div>
+      </div>
+      <p class="item-price">$25</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="cart-footer">
+    <p><strong>Subtotal:</strong> $25</p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <script src="script.js"></script>
     </body>
