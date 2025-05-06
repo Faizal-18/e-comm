@@ -54,7 +54,75 @@ body{
  font-family: inherit; 
 }
 
+.cart-sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.4s ease-in-out;
+  z-index: 9999;
+  overflow-y: auto;
+}
 
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.close-cart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+.scrolling-text {
+  background-color: #ffefc2;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.scrolling-container {
+  width: 100%;
+  overflow: hidden;
+  background: #ffefc2;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 0;
+  position: relative;
+}
+
+.scrolling-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 8s linear infinite;
+}
+
+.scrolling-content span {
+  padding-right: 50px; /* Space between repeats */
+  font-size: 18px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
 
 #header{
   position: fixed;
