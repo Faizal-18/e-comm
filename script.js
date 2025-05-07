@@ -19,6 +19,25 @@ if (cartIcon && cartSidebar) {
     cartSidebar.classList.add('active');
   });
 }
+// CART SIDEBAR TOGGLE
+document.getElementById('lg-bag').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.getElementById('cartSidebar').classList.add('active');
+});
+
+document.getElementById('closeCart').addEventListener('click', function () {
+  document.getElementById('cartSidebar').classList.remove('active');
+});
+
+// MOBILE MENU TOGGLE
+document.getElementById('bar').addEventListener('click', function () {
+  document.getElementById('navbar').classList.add('active');
+});
+
+document.getElementById('close').addEventListener('click', function () {
+  document.getElementById('navbar').classList.remove('active');
+});
+
 
 if (closeCart && cartSidebar) {
   closeCart.addEventListener('click', () => cartSidebar.classList.remove('active'));
