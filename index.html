@@ -20,79 +20,96 @@
     </head>
 
     <body>
- <section id="header">
-            <a href="#"><img src="logo.png"></a>
-            <div>
-           <ul id="navbar">
- <li><a href="index.html" class="active">Home</a></li>
- <li><a href="shop.html">Shop</a></li>
- <li><a href="blog.html">Blog</a></li>
- <li><a href="about.html">About</a></li>
- <li><a href="contact.html">Contact</a></li><li>
-  <a href="#" id="lg-bag">
-    <i class="fal fa-shopping-bag" id="cart-icon"></i>
-  </a>
-  <span class="quantity">0</span>
-</li>
-  
- <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
-                </ul>
-            </div>
-            <div id="mobile">
-              
-              <a href="#" id="mobile-cart">
-                <i class="fal fa-shopping-bag"></i>
-                <span class="quantity">0</span>
+      <section id="header">
+        <a href="#"><img src="logo.png" alt="Logo"></a>
+      
+        <div style="display: flex; align-items: center;">
+          <ul id="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="#" id="lg-bag" style="position: relative;">
+                <i class="fal fa-shopping-bag" id="cart-icon"></i>
+                <span id="cart-count">0</span>
               </a>
-            
-              <!-- Mobile menu toggle -->
-              <i id="bar" class="fas fa-outdent"></i>
-            </div>
+            </li>
+            <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+          </ul>
+      
+          <!-- ✅ Shop Now button placed next to navbar -->
+          <a href="shop.html" id="shop-now-btn">Shop Now</a>
+        </div>
+      
+        <div id="mobile">
+          <a href="#" id="mobile-cart">
+            <i class="fal fa-shopping-bag"></i>
+          </a>
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
+      </section>
+      
+  
+  
+        <section id="hero">
+          <div class="carousel">
+            <img src="omar-prestwich-jLEGurepDco-unsplash.jpg" class="carousel-img active" />
+            <img src="felipepelaquim-6zO5VKogoZE-unsplash.jpg" class="carousel-img" />
+            <img src="maksim-larin-ezdrvzA1hZw-unsplash.jpg" class="carousel-img" />
+            <img src="malvestida-DMl5gG0yWWY-unsplash.jpg" class="carousel-img" />
+          </div>
+        
+          <h3>Trade-in-fair</h3>
+          <h2>Super value deals</h2>
+          <h1>On all Products</h1>
+          <h3>Save more with coupons and up to 70% off!</h3>
+          <button>Shop Now</button>
         </section>
-  
-  
-    
-<section id="hero">
-  <h4>Trade-in-fair</h4>
-  <h2>Super value deals</h2>
-  <h1>On all Products</h1>
-  <p>Save more with coupons and up to 70% off!</p>
-  <button>Shop Now</button>
-  
-</section>
+        
 
 <section id="feature" class="section-p1">
   <div class="fe-box">
-    <img src="https://i.postimg.cc/PrN2Y6Cv/f1.png" alt="">
+    <img src="freeshipping.jpg" alt="">
     <h6>Free Shipping</h6>
   </div>
   
   <div class="fe-box">
-    <img src="https://i.postimg.cc/qvycxW4q/f2.png" alt="">
+    <img src="onlineorder.png" alt="">
     <h6>Online Order</h6>
   </div>
   
   <div class="fe-box">
-    <img src="https://i.postimg.cc/1Rdphyz4/f3.png" alt="">
+    <img src="savemoney.png" alt="">
     <h6>Save Money</h6>
   </div>
   
   <div class="fe-box">
-    <img src="https://i.postimg.cc/GpYc2JFZ/f4.png" alt="">
+    <img src="promotion.png" alt="">
     <h6>Promotions</h6>
   </div>
   
   <div class="fe-box">
-    <img src="https://i.postimg.cc/4yFCwmv6/f5.png" alt="">
+    <img src="happy.jpg" alt="">
     <h6>Happy Sell</h6>
   </div>
   
   <div class="fe-box">
-    <img src="https://i.postimg.cc/gJN1knTC/f6.png" alt="">
+    <img src="support.png" alt="">
     <h6>F24/7 Support</h6>
   </div>
   
 </section>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <h2>Your Cart <button id="closeCart">X</button></h2>
+  <ul id="cart-items"></ul>
+  <div id="cart-footer">
+    <button id="checkout-btn">Checkout</button>
+  </div>
+</div>
+
 
 <section id="product1" class="section-p1">
   <h2>Featured Products</h2>
@@ -112,7 +129,7 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
     
     
@@ -130,7 +147,7 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
     
     
@@ -148,7 +165,8 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
+
     </div>
     
     
@@ -166,18 +184,22 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
+
     </div>
   </section>
         <!-- Scrolling Announcement -->
   <div class="scrolling-container">
     <div class="scrolling-content">
-      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all T-Shirts! 🔥</span>
-      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all T-Shirts! 🔥</span>
-      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all T-Shirts! 🔥</span>
-      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all T-Shirts! 🔥</span>
+      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all Casual Shoes ! 🔥</span>
+      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all Casual Shoes ! 🔥</span>
+      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all Casual Shoes ! 🔥</span>
+      <span>🔥 Limited time offer: Buy 1 Get 1 Free on all Casual Shoes ! 🔥</span>
     </div>
   </div>
+  <br>
+  <br>
+
     
     <section id="banner" class="section-m1">
       <h4> Repair Service</h4>
@@ -203,7 +225,8 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
+
     </div>
     
    
@@ -222,7 +245,8 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
+
     </div>
     
     
@@ -241,7 +265,8 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <button class="add-to-cart">Add to Cart</button>
+
     </div>
     
     
@@ -260,13 +285,15 @@
         </div>
         <h4>$78</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    <button class="add-to-cart">Add to Cart</button>
+
     </div>
     
   </div>
 </section>
 
 
+<h1 style="text-align: center; font-size: 2rem; font-weight: bold;">OFFERS & DEALS</h1>
 
 
 <section id="sm-banner" class="section-p1"> 
@@ -289,7 +316,7 @@
 </section>
 
 <section id="banner3" class="section-p1">
-  <div class="banner-box">
+  <div class="banner-box banner-img1">
     
     <h2>WEEKEND SALES</h2>
     <h3>Casual Shoes - 25% OFF</h3>
@@ -311,6 +338,7 @@
   </div>
   
 </section>
+<br><br>
 
 <section id="newsletter" class="section-p1">
   <div class="newstext">
@@ -387,38 +415,9 @@
  </footer>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!-- Cart Sidebar -->
-<div id="cartSidebar" class="cart-sidebar">
-  <span id="closeCart" class="close-cart">×</span>
+ 
 
-  <!-- Header -->
-  <div class="cart-header">
-    <h2>Your Cart</h2>
-  </div>
 
-  <!-- Items -->
-  <div class="cart-items">
-    <!-- Example item; duplicate for more -->
-    <div class="cart-item">
-      <img src="images/product1.jpg" alt="Product 1">
-      <div class="item-details">
-        <p>Product Name</p>
-        <div class="item-controls">
-          <button>-</button>
-          <input type="text" value="1"/>
-          <button>+</button>
-        </div>
-      </div>
-      <p class="item-price">$25</p>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="cart-footer">
-    <p><strong>Subtotal:</strong> $25</p>
-    <button class="checkout-btn">Checkout</button>
-  </div>
-</div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
