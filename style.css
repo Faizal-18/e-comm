@@ -5,7 +5,7 @@ html {
 }
 
 html, body {
-  overflow-x: hidden; 
+  overflow-x: hidden; /* last resort to block all horizontal scrolling */
 }
 
 *{
@@ -637,7 +637,6 @@ button.white{
   display: flex;
   gap: 20px;
   animation: scrollBanners 12s linear infinite;
-  width: max-content;
 }
 
 #banner3 .banner-box {
@@ -829,190 +828,195 @@ footer .copyright{
    
 }
 
-
+#close {
+  display: none; /* always hidden by default */
+}
 
 /*----------------------Media Query ----------*/
 
-
 @media (max-width: 920px) {
-  
   .section-p1 {
-    padding: 40px 40px  
+    padding: 40px 40px;
   }
-  
-  #navbar{
-  display: flex;
-  flex-direction: column;   
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: fixed;
-  top: 0;
-  right: -300px;
-  height: 100vh;
-  width: 300px;
-  background-color: #E3E6F3;
-  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-  padding: 80px 0 0 10px;
-    transition: 0.3s
-    }
-  
-  #navbar.active{
-  right: 0;
-}
 
-  #navbar li{
-    margin-bottom: 25px
+  #navbar {
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+    z-index: 1000;
   }
-  
-  #mobile{
-display: flex;
-  align-items: center
-}
-  #mobile i{
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
     font-size: 32px;
-    color: #fff3f3;
-    padding-left: 20px
+    color: #000000;
+    padding-left: 20px;
   }
-  body #lg-bag{
-    display: none
-  }
-  
-  #close{
-  display: initial;
-  position: absolute;
-  top: -280px;
-  left: 20px;
-  color: #222;
-  font-size: 32px;  
-}
-  
-  #lg-bag{
-    display: none
-  }
-  
 
-   
-  #hero{
-  height: 70vh;
-  padding: 0 80px;
-  background-position: top 30% right 30%
- }
+  #lg-bag {
+    display: none;
+  }
+
+  #close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #222;
+    font-size: 32px;
+    z-index: 2000;
+  }
+  
+  #navbar.active ~ #close {
+    display: block;
+  }
+
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
 
   #feature {
-  justify-content: center;
-    
-}
-  
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+
   #feature .fe-box {
-    margin: 15px 15px
+    margin: 15px 15px;
   }
-  
-  #product1 .pro-container{
-    justify-content: center
+
+  #product1 .pro-container {
+    justify-content: center;
   }
-  
-  #product1 .pro{
+
+  #product1 .pro {
     margin: 15px;
   }
-  
-  #banner{
-    height: 25vh
+
+  #banner {
+    height: 25vh;
   }
-  
-  #sm-banner .banner-box{
+
+  #sm-banner .banner-box {
     min-width: 100%;
     height: 30vh;
   }
-  
-  #banner3{
-    padding: 0 40px
+
+  #banner3 {
+    padding: 0 40px;
   }
-  
-  #banner3 .banner-box{
-    width: 28%
+
+  #banner3 .banner-box {
+    width: 28%;
   }
-  
+
   #newsletter .form {
-    width: 70%
+    width: 70%;
   }
-  
 }
 
 @media (max-width: 477px) {
-  .section-p1{
-    padding: 20px
+  .section-p1 {
+    padding: 20px;
   }
-  
-  #header{
+
+  #header {
     padding: 10px 30px;
   }
-  
-  
-  
-  #hero{
+
+  #hero {
     padding: 0 20px;
     background-position: 55%;
   }
-  
+
   h2 {
-    font-size: 30px
+    font-size: 30px;
   }
-  
-  h1{
-    font-size: 28px
+
+  h1 {
+    font-size: 28px;
   }
-  
-  p{
+
+  p {
     line-height: 24px;
     font-size: 10px;
   }
-  
-  #hero button{
-    margin-right: 10px
+
+  #hero button {
+    margin-right: 10px;
   }
-  
-  #feature{
+
+  #feature {
     justify-content: space-between;
+    flex-wrap: wrap;
   }
-  
-  #feature .fe-box{
+
+  #feature .fe-box {
     width: 155px;
     margin: 0 0 15px 0;
   }
-  
-  #product1 .pro{
-    width: 100%
+
+  #product1 .pro {
+    width: 100%;
   }
-  
-  #banner{
+
+  #banner {
     height: 40vh;
   }
-  
-  #sm-banner .banner-box{
+
+  #sm-banner .banner-box {
     height: 40vh;
-}
-  
+  }
+
   #sm-banner .banner-box2 {
     margin-top: 20px;
   }
-  
-  #banner3{
+
+  #banner3 {
     padding: 0 20px;
   }
-  
-  #banner3 .banner-box{
+
+  #banner3 .banner-box {
     width: 100%;
   }
-  
-  #newsletter .form{
-    width:  100%
+
+  #newsletter .form {
+    width: 100%;
   }
-  
-  #newsletter{
+
+  #newsletter {
     padding: 40px 20px;
   }
-  
-  footer .copyright{
+
+  footer .copyright {
     text-align: start;
   }
 }
