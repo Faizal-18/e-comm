@@ -889,9 +889,13 @@ footer .copyright{
   display: none; /* always hidden by default */
 }
 
-#bar{
+#mobile-cart {
   display: none;
 }
+
+  #bar{
+    display: none;
+  }
 
 /*----------------------Media Query ----------*/
 
