@@ -353,10 +353,10 @@ display: none;
 }
 
 #feature .fe-box{
-  width: 350px;
+  width: 200px;
   text-align: center;
   background-color: #8c565646;
-  padding: 25px 15px;
+  padding: 25px 5px;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
   border: 1px solid #8c565646;
   border-radius: 4px;
@@ -459,13 +459,13 @@ display: none;
 }
 
 #product1 .pro .des span {
-  color: #000000;
+  color: #ffffff;
   font-size: 12px;
 }
 
 #product1 .pro .des h5 {
   padding-top: 7px;
-  color: #1a1a1a;
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -503,7 +503,8 @@ display: none;
 }
 
 
-#banner{
+#banner {
+  position: relative; /* ✅ Required for ::before to align properly */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -514,16 +515,30 @@ display: none;
   height: 40vh;
   background-position: center;
   background-size: cover;
-  
+  overflow: hidden; /* Optional: prevents ::before overflow */
+}
+
+#banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* dimming effect */
+  z-index: 1;
+}
+
+#banner * {
+  position: relative;
+  z-index: 2;
 }
 
 #banner h4{
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
 }
 
 #banner h2{
-  color: #000000;
+  color: #ffffff;
   font-size: 30px;
   padding: 10px 0;
 }
@@ -564,7 +579,9 @@ button.normal{
   height: 40vh;
   background-position: center;
   background-size: cover;
-  padding: 30px
+  padding: 30px;
+  position: relative;
+  overflow: hidden
 }
 
 #sm-banner .banner-box2{
@@ -579,7 +596,9 @@ button.normal{
   height: 40vh;
   background-position: center;
   background-size: cover;
-  padding: 30px
+  padding: 30px;
+  position: relative;
+  overflow: hidden
   
 }
 
@@ -607,6 +626,23 @@ button.normal{
   font-weight: 500;
   padding-bottom: 16px;
 }
+
+#sm-banner .banner-box::before,
+#sm-banner .banner-box2::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8   ); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+#sm-banner .banner-box *, 
+#sm-banner .banner-box2 * {
+  position: relative;
+  z-index: 2;
+}
+
 
 button.white{
   color: #ffffff;
@@ -640,6 +676,8 @@ button.white{
 }
 
 #banner3 .banner-box {
+  position: relative;       /* Needed for ::before overlay */
+  overflow: hidden;         /* Ensures overlay stays within bounds */
   flex: 0 0 30vw;
   height: 30vh;
   border-radius: 8px;
@@ -653,6 +691,22 @@ button.white{
   align-items: flex-start;
 }
 
+#banner3 .banner-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust darkness as needed */
+  z-index: 1;
+  border-radius: 8px; /* match the box */
+}
+
+#banner3 .banner-box * {
+  position: relative;
+  z-index: 2;
+}
+
+
 @keyframes scrollBanners {
   0% {
     transform: translateX(0);
@@ -664,6 +718,7 @@ button.white{
 
 #banner3 .banner-img1 {
   background-image: url('weekend.jpg');
+
 }
 
 #banner3 .banner-img2 {
@@ -671,7 +726,7 @@ button.white{
 }
 
 #banner3 .banner-img3 {
-  background-image: url('exchange.jpg');
+  background-image: url('exchange.jpg') ;
 }
 
 #banner3 h2 {
@@ -747,6 +802,7 @@ button.white{
 
 footer {
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
@@ -771,27 +827,28 @@ footer .sec{
 }
 
 footer .logo{
-
-    max-width: 100px; /* Adjust as needed */
+    max-width: 200px; /* Adjust as needed */
     height: auto;
-  
+
 }
 
 footer h4{
   font-size: 14px;
+  color: #000;
   padding-bottom: 20px
 }
 
 footer p{
   font-size: 13px;
+  color: #000;
   margin: 0 0 8px 0;
 }
 
 
 footer a{
   font-size: 13px;
+  color: #000;
   text-decoration: none;
-  color: #222;
   margin-bottom: 10px;
 }
 
@@ -864,6 +921,16 @@ footer .copyright{
     margin-bottom: 25px;
   }
 
+  #navbar #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+
   #mobile {
     display: flex;
     align-items: center;
@@ -892,6 +959,22 @@ footer .copyright{
   #navbar.active ~ #close {
     display: block;
   }
+
+  #mobile-cart {
+    position: relative;
+  }
+  
+  #cart-count-mobile {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  
 
   #hero {
     height: 70vh;
