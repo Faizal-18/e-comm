@@ -889,6 +889,10 @@ footer .copyright{
   display: none; /* always hidden by default */
 }
 
+#bar{
+  display: none;
+}
+
 /*----------------------Media Query ----------*/
 
 @media (max-width: 920px) {
