@@ -24,10 +24,11 @@
     <body>
       <section id="header">
         <a href="#"><img src="logo.png" alt="Logo"></a>
-        <div id="mobile">
-          <a href="#" id="mobile-cart">
-            <i class="fal fa-shopping-bag"></i>
-          </a>
+        <a href="#" id="mobile-cart" style="position: relative;">
+          <i class="fal fa-shopping-bag"></i>
+          <span id="cart-count-mobile">0</span>
+        </a>
+        
           <i id="bar" class="fas fa-outdent"></i>
         </div>
       
@@ -44,14 +45,13 @@
                 <span id="cart-count">0</span>
               </a>
             </li>
+            <!-- ✅ Close Button Moved Inside -->
+            <li id="close"><i class="fas fa-times"></i></li>
           </ul>
-        
-          <!-- ✅ Move close icon outside, but still inside header for positioning -->
-          <a href="#" id="close"><i class="fas fa-times"></i></a>
           
       
           <!-- ✅ Shop Now button placed next to navbar -->
-          <a href="shop.html" id="shop-now-btn">Shop Now</a>
+          <a id="shop-now-btn">Shop Now</a>
           
         </div>
       
