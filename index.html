@@ -5,6 +5,8 @@
         <title>Foot Wears Ecommerce Website</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />  
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
       <!-------------------------Font Awesome Icons --------------->  
   <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
   <!----------x---------------Font Awesome Icons --------x------->
@@ -22,6 +24,12 @@
     <body>
       <section id="header">
         <a href="#"><img src="logo.png" alt="Logo"></a>
+        <div id="mobile">
+          <a href="#" id="mobile-cart">
+            <i class="fal fa-shopping-bag"></i>
+          </a>
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
       
         <div style="display: flex; align-items: center;">
           <ul id="navbar">
@@ -36,19 +44,18 @@
                 <span id="cart-count">0</span>
               </a>
             </li>
-            <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
           </ul>
+        
+          <!-- ✅ Move close icon outside, but still inside header for positioning -->
+          <a href="#" id="close"><i class="fas fa-times"></i></a>
+          
       
           <!-- ✅ Shop Now button placed next to navbar -->
           <a href="shop.html" id="shop-now-btn">Shop Now</a>
+          
         </div>
       
-        <div id="mobile">
-          <a href="#" id="mobile-cart">
-            <i class="fal fa-shopping-bag"></i>
-          </a>
-          <i id="bar" class="fas fa-outdent"></i>
-        </div>
+        
       </section>
       
   
@@ -355,9 +362,9 @@
 </section>
 
 <footer class="section-p1">
-  
+  <a href="#"><img class="logo" src="logo.png"></a>
 <div class="col">
-<a href="#"><img class="logo" src="logo.png"></a>
+
     <h4>Contact</h4>
      <p><strong>Address:<strong>Bangalore,Karnataka.</p>
     <p><strong>Phone:</strong>+91 9345272476</p>
