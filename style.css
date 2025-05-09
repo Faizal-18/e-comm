@@ -1061,6 +1061,15 @@ footer .copyright{
     font-size: 10px;
   }
 
+  #bar {
+    display: block;
+  }
+
+  /* Show mobile cart icon */
+  #mobile-cart {
+    display: block;
+  }
+
   #hero button {
     margin-right: 10px;
   }
